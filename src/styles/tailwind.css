@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*------Color variables------*/
+    --black_900: #000000;
+    --black_900_19: #00000019;
+    --blue_gray_100: #cbd5e1;
+    --blue_gray_800: #334450;
+    --cyan_900: #15616d;
+    --deep_orange_50: #f9efe4;
+    --gray_200: #e6e8e9;
+    --gray_50: #fcfcfc;
+    --gray_50_01: #f8f7f8;
+    --orange_400_33: #ff9f1c33;
+    --orange_400_cc: #ff9f1ccc;
+    --red_600: #e42f2f;
+    --slate_400: #94a3b8;
+    --teal_300: #2ec4b6;
+    --teal_300_33: #2ec4b633;
+    --teal_300_cc: #2ec4b6cc;
+    --teal_600: #218b81;
+    --teal_800: #196c64;
+    --teal_900: #0f454d;
+    --white_a700: #ffffff;
+
+    /*------Shadow variables------*/
+    --shadow-xs: 0 8px 12px 0 #00000019;
+
+    /*------Border radius variables------*/
+    --radius-xs: 8px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 18px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
+
+    /*------Spacing variables------*/
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 10px;
+    --space-lg: 12px;
+    --space-xl: 14px;
+    --space-2xl: 16px;
+    --space-3xl: 24px;
+    --space-4xl: 28px;
+    --space-5xl: 36px;
+    --space-6xl: 48px;
+    --space-7xl: 58px;
+    --space-8xl: 128px;
+  }
+  [type="text"],
+  input:where(:not([type])),
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    appearance: none;
+    background-color: transparent;
+    border-color: unset;
+    border-width: 0;
+    border-radius: unset;
+    padding: unset;
+    font-size: unset;
+    line-height: unset;
+  }
+
+  /* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="search"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: transparent;
+    border-color: transparent;
+  }
+  [type="radio"]:focus,
+  [type="checkbox"]:focus {
+    --tw-ring-color: transparent;
+  }
+}
