@@ -7,6 +7,7 @@ const sizes = {
   textmd: "text-[48px] font-medium md:text-[44px] sm:text-[38px]",
   headingxs: "text-[14px] font-bold",
   headings: "text-[16px] font-bold",
+  heading_h3: "text-[26px] font-bold",
 };
 
 export type HeadingProps = Partial<{
@@ -14,7 +15,10 @@ export type HeadingProps = Partial<{
   as: any;
   size: keyof typeof sizes;
 }> &
-  React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
+  React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLSpanElement>,
+    HTMLSpanElement
+  >;
 
 const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   children,
@@ -27,7 +31,9 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
 
   return (
     <Component
-      className={`text-black-900 font-crimsonpro ${className} ${sizes[size] as keyof typeof sizes}`}
+      className={`text-black-900 font-crimsonpro ${className} ${
+        sizes[size] as keyof typeof sizes
+      }`}
       {...restProps}
     >
       {children}
